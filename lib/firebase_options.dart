@@ -20,10 +20,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'try to add using FlutLab Firebase Configuration',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for iOS - '
@@ -51,10 +48,21 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCiVdD1KD3UbH1WwyGXnt1JPGcXp-V7do8',
+    appId: '1:914328900670:android:d83fc3686c0483f91b2d6f',
+    messagingSenderId: '914328900670',
+    projectId: 'chatapp-e806a',
+    storageBucket: 'chatapp-e806a.appspot.com'
+  );
+
   static const FirebaseOptions web = FirebaseOptions(
-      apiKey: "AIzaSyAhE5iTdU1MflQxb4_M_uHiXJR9EC_mE_I",
-      authDomain: "nanochat.firebaseapp.com",
-      projectId: "firebase-nanochat",
-      messagingSenderId: '137230848633',
-      appId: '1:137230848633:web:89e9b54f881fa0b843baa8');
+    apiKey: 'AIzaSyBi3f_GFPIBo9_xBZctj6Qdh3iusEPSivQ',
+    authDomain: 'chatapp-e806a.firebaseapp.com',
+    projectId: 'chatapp-e806a',
+    storageBucket: 'chatapp-e806a.appspot.com',
+    messagingSenderId: '914328900670',
+    appId: '1:914328900670:web:67696e869a78199c1b2d6f',
+    measurementId: 'G-4L54SCWC2J'
+  );
 }
